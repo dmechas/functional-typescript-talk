@@ -1,0 +1,15 @@
+# Dependency directory
+node_modules
+
+### Operating Systems stuff ###
+
+# OSX
+.DS_Store
+*.DS_Store
+
+### IDE stuff ###
+
+# Code IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json

@@ -1,0 +1,20 @@
+{
+  "name": "functional-typescript-talk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "lint": "tslint --project tsconfig.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fp-ts": "^1.15.0",
+    "typescript": "^3.4.1"
+  },
+  "devDependencies": {
+    "ts-node": "^8.0.3",
+    "tslint": "^5.14.0"
+  }
+}

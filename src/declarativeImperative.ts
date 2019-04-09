@@ -1,8 +1,6 @@
-function getPositivesDeclarative(arr: number[]) {
-  return arr.filter(a => a > 0)
-}
+const getPositivesDeclarative = (arr: number[]) => arr.filter(a => a > 0)
 
-function getPositivesImperative(arr: number[]) {
+const getPositivesImperative = (arr: number[]) => {
   const result: number[] = []
 
   for (const elm of arr) {

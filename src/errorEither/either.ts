@@ -1,4 +1,3 @@
-import { Either, left, right, tryCatch2v } from "fp-ts/lib/Either"
 import { getSession as getSessionError, getUser as getUserError, wrapErrors1 } from "./common"
 
 interface Session {
@@ -14,7 +13,7 @@ interface User {
 const getSession = wrapErrors1(getSessionError, "Session not found")
 const getUser = wrapErrors1(getUserError, "User not found")
 
-const getLoggedInUserName: (sessionId: string) => Either<Error, string> = (sessionId: string) =>
+const getLoggedInUserName = (sessionId: string) =>
   getSession(sessionId)
     .map(session => session.userId)
     .chain(getUser)

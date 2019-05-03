@@ -1,12 +1,17 @@
-const getPositivesDeclarative = (arr: number[]) => arr.filter(a => a > 0)
+import { lift } from "fp-ts/lib/Functor"
 
-const getPositivesImperative = (arr: number[]) => {
+// Imperative style: favours inlining and mutability
+function getPositivesImperative(arr: number[]) {
   const result: number[] = []
 
-  for (const elm of arr) {
-    if (elm > 0) {
-      result.push(elm)
+  for (const n of arr) {
+    if (n > 0) {
+      result.push(n)
     }
   }
   return result
 }
+
+// Declarative style: favours composition and immutability
+const isPositive = (n: number) => n > 0
+const getPositivesDeclarative = (arr: number[]) => arr.filter(isPositive)

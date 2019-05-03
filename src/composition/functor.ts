@@ -6,7 +6,7 @@ import { delay, Task } from "fp-ts/lib/Task"
 /// Up until now we've bee dealing with pure functions, that is functions of type:
 type Pure<A, B> = (a: A) => B
 
-/// What about computations with side effects (effectful computations)?
+/// What about functions with side effects (effectful functions)?
 
 // What is an effectful computation?
 /// It is a function with the following signature
